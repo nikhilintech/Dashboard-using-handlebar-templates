@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Document</title>
+    <script src="Chartjs/chart.js"></script>
+    <script src="jQuery-3.3.1/jquery-3.3.1.min.js"></script>
+<script src="Chartjs/Chart.min.js"></script>
+    <link rel="stylesheet" href="CSS\styles.css">
+  </head>
+  <body>
+    <center><h1>DASHBOARD</h1></center>
+    <div class="container">
+      <div class="box">
+        <div class="icon" align="center" font="Poppins">  <font
+  color="white">
+    Today’s order- 200 <br><br>
+    Current Week Order- 450
+</font> </div>
+
+        </div>
+
+        <div class="container">
+          <div class="box">
+            <div class="icon" align="center" font="Poppins">  <font
+      color="white">
+        Today’s order amount- 20000 <br><br>
+        Current Week amount- 45000
+    </font> </div>
+
+            </div>
+
+
+
+            <div class="container">
+              <div class="box">
+                <div class="icon" align="center" font="Poppins">  <font
+          color="white">
+            MTD order- 400 <br><br>
+            Last Month Order- 200
+        </font> </div>
+                  </div>
+
+                </div>
+
+
+
+                <div class="container">
+                  <div class="box">
+                    <div class="icon" align="center" font="Poppins">  <font
+              color="white">
+                MTD order amount- 65000 <br><br>
+                Last month amount- 45000
+            </font> </div>
+
+                    </div>
+                  </p>
+
+<p>
+  <center>
+    <div class="container" style="width:90% ; height:80vh " >
+    <canvas id="myChart"></canvas>
+</  div>
+
+    <script>
+    var ctx = document.getElementById("myChart").getContext('2d');
+    var myLineChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ["01/04/2021", "02/04/2021", "03/04/2021", "04/04/2021", "05/04/2021", "05/04/2021"],
+            datasets: [{
+              fill: false,
+              backgroundColor: '#1a82d8',
+
+                label: 'ORDER AMOUNT',
+                  data: [5000, 15000, 20000, 10000, 10000, 40000],
+
+                borderColor: '#1a82d8',
+                borderWidth: 7
+            }]
+        },
+        options: {
+          bezierCurve: false,
+
+
+          title: {
+            display: true,
+            text: 'ORDER AMOUNT',
+              fontSize: 20,
+          },
+          legend: {
+            position: 'bottom',
+          },
+
+          responsive: true,
+          maintainAspectRatio: false,
+
+            scales: {
+              xAxes: [{gridLines: { color: "#131c2b" }}],
+                yAxes: [{
+
+                  gridLines: {
+  display: false ,
+  color: "#1a82d8"
+},
+                    ticks: {
+
+                                    beginAtZero:true
+
+
+                    }
+
+                }]
+            }
+        }
+    });
+    </script>
+</center>
+<br>
+<br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<!-- Table -->
+<center>
+  <h1>TOP 5 ORDER</h1>
+  <table>
+    <tr>
+      <td>ORDER NO.</td>
+      <td>TOTAL AMOUNT</td>
+      <td>TOTAL QUANTITY</td>
+      <td>USER NAME</td>
+    </tr>
+    <tr>
+      <td>#100</td>
+      <td>7000</td>
+      <td>11</td>
+      <td>Rahul Gupta</td>
+    </tr>
+    <tr>
+      <td>#101</td>
+      <td>5889</td>
+      <td>9</td>
+      <td>Ajay Sharma</td>
+    </tr>
+    <tr>
+      <td>#102</td>
+      <td>4590</td>
+      <td>8</td>
+      <td>Janu Suksma</td>
+    </tr>
+    <tr>
+      <td>#104</td>
+      <td>3657</td>
+      <td>6</td>
+      <td> Mira Saunak</td>
+    </tr>
+    <tr>
+      <td>#105</td>
+      <td>1700</td>
+      <td>5</td>
+      <td> Gopa Trilochana</td>
+    </tr>
+  </table>
+
+
+  <!-- Table 2 -->
+  <center>
+    <h1>BOTTOM 5 ORDER</h1>
+    <table>
+      <tr>
+        <td>ORDER NO.</td>
+        <td>TOTAL AMOUNT</td>
+        <td>TOTAL QUANTITY</td>
+        <td>USER NAME</td>
+      </tr>
+      <tr>
+        <td>#106</td>
+        <td>1102</td>
+        <td>4</td>
+        <td>Chandra Dhupam</td>
+      </tr>
+      <tr>
+        <td>#107</td>
+        <td>900</td>
+        <td>4</td>
+        <td>Abhiti Soma</td>
+      </tr>
+      <tr>
+        <td>#108</td>
+        <td>700</td>
+        <td>3</td>
+        <td>	Vijai Sritharan</td>
+      </tr>
+      <tr>
+        <td>#109</td>
+        <td>400</td>
+        <td>2</td>
+        <td> Devasru Subramanyan</td>
+      </tr>
+      <tr>
+        <td>#110</td>
+        <td>170</td>
+        <td>1</td>
+        <td> 	Dipa Parul</td>
+      </tr>
+    </table>
+    <br><br>
+
+    <hr size"3" noshade>
+
+    <!-- Table 3 -->
+
+    <center>
+      <h1>TOP 5 USER</h1>
+      <table>
+        <tr>
+          <td>USER NAME</td>
+          <td>TOTAL AMOUNT</td>
+          <td>TOTAL QUANTITY</td>
+          <td>CITY</td>
+        </tr>
+        <tr>
+          <td>Rahul Gupta</td>
+          <td>7000</td>
+          <td>11</td>
+          <td>Namchi</td>
+        </tr>
+        <tr>
+          <td>Ajay Sharma</td>
+          <td>5889</td>
+          <td>9</td>
+          <td>Gangtok</td>
+        </tr>
+        <tr>
+          <td>Janu Suksma</td>
+          <td>4590</td>
+          <td>8</td>
+          <td>Namchi</td>
+        </tr>
+        <tr>
+          <td>Mira Saunak</td>
+          <td>3657</td>
+          <td>6</td>
+          <td>Gangtok</td>
+        </tr>
+        <tr>
+          <td>Gopa Trilochana</td>
+          <td>1700</td>
+          <td>5</td>
+          <td>Gangtok</td>
+        </tr>
+      </table>
+
+      <!-- table4 -->
+
+      <h1>BOTTOM 5 USER</h1>
+      <table>
+        <tr>
+          <td>USER NAME</td>
+          <td>TOTAL AMOUNT</td>
+          <td>TOTAL QUANTITY</td>
+          <td>CITY</td>
+        </tr>
+        <tr>
+          <td>Chandra Dhupam</td>
+          <td>1102</td>
+          <td>4</td>
+          <td>Gangtok</td>
+        </tr>
+        <tr>
+          <td>Abhiti Soma</td>
+          <td>900</td>
+          <td>4</td>
+          <td>Gangtok</td>
+        </tr>
+        <tr>
+          <td>Vijai Sritharan</td>
+          <td>700</td>
+          <td>3</td>
+          <td>Namchi</td>
+        </tr>
+        <tr>
+          <td>Devasru Subramanyan</td>
+          <td>400</td>
+          <td>2</td>
+          <td>Gangtok</td>
+        </tr>
+        <tr>
+          <td>Dipa Paru</td>
+          <td>170</td>
+          <td>1</td>
+          <td>Gangtok</td>
+        </tr>
+      </table>
+
+  <!-- Table 5 -->
+
+
+      <h1>Detail Order Report</h1>
+
+      <table>
+        <tr>
+          <td> <strong>USER NAME <strong></td>
+          <td><Strong>ORDER NO.<strong></td>
+          <td><strong>ORDER DATE<strong></td>
+          <td><strong>STATUS<strong></td>
+          <td><strong>TOTAL AMOUNT<strong></td>
+          <td><strong>TOTAL QTY <strong></td>
+          <td><strong>TOTAL PRODUCT COUNT<strong></td>
+        </tr>
+        <tr>
+          <td> Rahul Gupta </td>
+          <td>#100</td>
+          <td>09/04/2021</td>
+          <td>Confirmed</td>
+          <td>7000</td>
+          <td>11</td>
+          <td>11</td>
+        </tr>
+        <tr>
+          <td> Ajay Sharma </td>
+          <td>#101</td>
+          <td>09/04/2021</td>
+          <td>Confirmed</td>
+          <td>5889</td>
+          <td>9</td>
+          <td>9</td>
+        </tr>
+        <tr>
+          <td> Janu Suksma </td>
+          <td>#102</td>
+          <td>15/04/2021</td>
+          <td>Rejected</td>
+          <td>4590</td>
+          <td>8</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td> Mira Saunak </td>
+          <td>#103</td>
+          <td>19/04/2021</td>
+          <td>Confirmed</td>
+          <td>3657</td>
+          <td>6</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td> Gopa Trilochana </td>
+          <td>#104</td>
+          <td>24/04/2021</td>
+          <td>Confirmed</td>
+          <td>1500</td>
+          <td>5</td>
+          <td>5</td>
+        </tr>
+      </table>
+
+
+
+  </body>
+</html>
